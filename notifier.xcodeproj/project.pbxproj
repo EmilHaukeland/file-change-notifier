@@ -43,6 +43,7 @@
 		209549341C942A5C0044118E /* Broadcaster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Broadcaster.swift; sourceTree = "<group>"; };
 		2F8FC02E64A72C18FC7E0901 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
 		2F8FCC685F2736B999DD7CE8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		382BC3819237D71F0BC864FD /* test-config.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "test-config.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +77,7 @@
 				209549291C937B510044118E /* Products */,
 				2F8FCC685F2736B999DD7CE8 /* README.md */,
 				2F8FC02E64A72C18FC7E0901 /* .gitignore */,
+				382BC3819237D71F0BC864FD /* test-config.json */,
 			);
 			sourceTree = "<group>";
 		};
