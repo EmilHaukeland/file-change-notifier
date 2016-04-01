@@ -1,0 +1,16 @@
+{
+  "ip": null,
+  "port": 2050,
+  "paths": [
+    "path1",
+    "path2"
+  ],
+  "filters": [
+    "filter1",
+    "filter2",
+    "filter3",
+  ],
+  "fileTypes": [
+    "fileType1"
+  ]
+}

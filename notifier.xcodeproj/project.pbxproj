@@ -43,6 +43,7 @@
 		209549341C942A5C0044118E /* Broadcaster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Broadcaster.swift; sourceTree = "<group>"; };
 		2F8FC02E64A72C18FC7E0901 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
 		2F8FCC685F2736B999DD7CE8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		382BCBA0E093E363DBE12C27 /* test-config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "test-config.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +77,7 @@
 				209549291C937B510044118E /* Products */,
 				2F8FCC685F2736B999DD7CE8 /* README.md */,
 				2F8FC02E64A72C18FC7E0901 /* .gitignore */,
+				382BC87DE8936DF5773970D5 /* example */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +99,14 @@
 			);
 			name = src;
 			path = notifier;
+			sourceTree = "<group>";
+		};
+		382BC87DE8936DF5773970D5 /* example */ = {
+			isa = PBXGroup;
+			children = (
+				382BCBA0E093E363DBE12C27 /* test-config.json */,
+			);
+			path = example;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
