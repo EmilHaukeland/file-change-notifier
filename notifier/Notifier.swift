@@ -26,12 +26,9 @@ class Notifier
     
     func start() -> Void
     {
-        print("Starting broadcaster");
         broadcaster.start();
-        print("Starting fileWatcher");
         fileWatcher.start();
 
-        print("Starting loop");
         CFRunLoopRun();
     }
     
@@ -45,7 +42,6 @@ class Notifier
     
     private func onFileChanged(information:Any?) -> Void
     {
-        print("onFileChanged");
         let data:String = information as! String;
         if isAbleToPassFiltering(data)
         {

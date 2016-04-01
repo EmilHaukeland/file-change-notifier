@@ -17,7 +17,6 @@ class FileSystemWatcher
             eventIds: UnsafePointer<FSEventStreamEventId>
         ) in
 
-        print("eventCallback");
         let fileSystemWatcher: FileSystemWatcher = unsafeBitCast(contextInfo, FileSystemWatcher.self)
         let paths = unsafeBitCast(eventPaths, NSArray.self) as! [String]
         
@@ -37,10 +36,6 @@ class FileSystemWatcher
     {
         self.lastEventId = FSEventStreamEventId(kFSEventStreamEventIdSinceNow)
         self.pathsToWatch = pathsToWatch
-        print("FileSystemWatcher paths to watch: "+pathsToWatch.description);
-
-        let eventString:String = String(self.lastEventId);
-        print("FileSystemWatcher eventOd: "+eventString);
     }
     
     deinit
@@ -50,27 +45,18 @@ class FileSystemWatcher
     
     func start()
     {
-        print("started guard");
         guard started == false else { return }
 
-        print("context");
         var context = FSEventStreamContext(version: 0, info: nil, retain: nil, release: nil, copyDescription: nil)
         context.info = UnsafeMutablePointer<Void>(unsafeAddressOf(self))
 
-        print("flags");
         let flags = UInt32(kFSEventStreamCreateFlagUseCFTypes | kFSEventStreamCreateFlagFileEvents)
 
-
-        print("stream ref");
         streamRef = FSEventStreamCreate(kCFAllocatorDefault, eventCallback, &context, pathsToWatch, lastEventId, 0, flags)
 
-        print("stream ref loop");
         FSEventStreamScheduleWithRunLoop(streamRef, CFRunLoopGetMain(), kCFRunLoopDefaultMode)
-        print("stream ref start");
         FSEventStreamStart(streamRef)
 
-        print("stream ref started");
-        
         started = true
     }
     

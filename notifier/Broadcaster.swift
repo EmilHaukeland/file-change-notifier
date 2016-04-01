@@ -48,25 +48,11 @@ class Broadcaster
     
     dynamic func listenForConnections(object:String?) -> Void
     {
-        print("listenForConnections");
         while(keepRunning)
         {
-            print("Checking for incoming connection");
             let connection:Connection = self.getIncomingConnection()!;
-            print("Got incoming connection");
             let thread : NSThread =  NSThread(target:self, selector:Selector("runner:"), object:connection);
             thread.start();
-            print("New thread started for connection");
-//            if connection != nil
-//            {
-//                print("Got incoming connection");
-//                let thread : NSThread =  NSThread(target:self, selector:Selector("runner:"), object:connection);
-//                thread.start();
-//            }
-//            else
-//            {
-////                print("No incoming connection");
-//            }
         }
     }
     
