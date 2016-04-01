@@ -23,7 +23,7 @@ class Broadcaster
     
     init(_ ip:String?, _ port:UInt16)
     {
-        handle = socket(PF_INET, SOCK_STREAM, IPPROTO_UDP);
+        handle = socket(PF_INET, SOCK_STREAM, IPPROTO_TCP);
         address = createIPv4Address(ip, port: port);
     }
     
